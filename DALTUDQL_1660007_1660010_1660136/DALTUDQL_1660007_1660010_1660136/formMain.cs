@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DALTUDQL_1660007_1660010_1660136
 {
-    public partial class frmMain : Form
+    public partial class formMain : Form
     {
-        public frmMain()
+        public formMain()
         {
             InitializeComponent();
         }

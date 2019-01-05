@@ -46,17 +46,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmMain.cs">
+    <Compile Include="formBCDT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <Compile Include="formBCDT.Designer.cs">
+      <DependentUpon>formBCDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formBCSDT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formBCSDT.Designer.cs">
+      <DependentUpon>formBCSDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formDSBN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDSBN.Designer.cs">
+      <DependentUpon>formDSBN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formDSKB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDSKB.Designer.cs">
+      <DependentUpon>formDSKB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formHoaDon.Designer.cs">
+      <DependentUpon>formHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formPKB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPKB.Designer.cs">
+      <DependentUpon>formPKB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMain.Designer.cs">
+      <DependentUpon>formMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provider.cs" />
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <EmbeddedResource Include="formBCDT.resx">
+      <DependentUpon>formBCDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formBCSDT.resx">
+      <DependentUpon>formBCSDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDSBN.resx">
+      <DependentUpon>formDSBN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDSKB.resx">
+      <DependentUpon>formDSKB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formHoaDon.resx">
+      <DependentUpon>formHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMain.resx">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPKB.resx">
+      <DependentUpon>formPKB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

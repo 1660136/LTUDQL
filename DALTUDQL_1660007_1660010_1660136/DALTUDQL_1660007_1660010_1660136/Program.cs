@@ -16,7 +16,7 @@ namespace DALTUDQL_1660007_1660010_1660136
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new formMain());
         }
     }
 }
