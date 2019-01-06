@@ -333,6 +333,8 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "formDSKB";
             this.Text = "Danh sách khám bệnh";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formDSKB_FormClosed);
+            this.Load += new System.EventHandler(this.formDSKB_Load);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSKB)).EndInit();
             this.groupBox1.ResumeLayout(false);

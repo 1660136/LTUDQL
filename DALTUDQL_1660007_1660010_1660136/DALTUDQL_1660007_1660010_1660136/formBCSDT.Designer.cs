@@ -138,6 +138,8 @@
             this.Controls.Add(this.label1);
             this.Name = "formBCSDT";
             this.Text = "Báo cáo sử dụng thuốc";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formBCSDT_FormClosed);
+            this.Load += new System.EventHandler(this.formBCSDT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);

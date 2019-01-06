@@ -138,6 +138,8 @@
             this.Controls.Add(this.label1);
             this.Name = "formBCDT";
             this.Text = "Báo cáo doanh thu";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formBCDT_FormClosed);
+            this.Load += new System.EventHandler(this.formBCDT_Load);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBCDT)).EndInit();
             this.ResumeLayout(false);

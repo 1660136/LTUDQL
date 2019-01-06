@@ -351,6 +351,7 @@
             this.Controls.Add(this.btnPKB_Them);
             this.Name = "formPKB";
             this.Text = "Phiếu khám bệnh";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formPKB_FormClosed);
             this.Load += new System.EventHandler(this.formPKB_Load);
             this.groupBoxTTPKB.ResumeLayout(false);
             this.groupBoxTTBN.ResumeLayout(false);

@@ -256,6 +256,8 @@
             this.Controls.Add(this.groupBox4);
             this.Name = "formDSBN";
             this.Text = "Danh sách bệnh nhân";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formDSBN_FormClosed);
+            this.Load += new System.EventHandler(this.formDSBN_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSBN)).EndInit();
