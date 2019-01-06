@@ -63,6 +63,7 @@
             this.btnBCDT_Thoat.TabIndex = 29;
             this.btnBCDT_Thoat.Text = "THOÁT";
             this.btnBCDT_Thoat.UseVisualStyleBackColor = true;
+            this.btnBCDT_Thoat.Click += new System.EventHandler(this.btnBCDT_Thoat_Click);
             // 
             // cbbBCDT_Thang
             // 

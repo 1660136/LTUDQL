@@ -63,6 +63,7 @@
             this.btnBCSDT_Thoat.TabIndex = 33;
             this.btnBCSDT_Thoat.Text = "THOÁT";
             this.btnBCSDT_Thoat.UseVisualStyleBackColor = true;
+            this.btnBCSDT_Thoat.Click += new System.EventHandler(this.btnBCSDT_Thoat_Click);
             // 
             // comboBox1
             // 

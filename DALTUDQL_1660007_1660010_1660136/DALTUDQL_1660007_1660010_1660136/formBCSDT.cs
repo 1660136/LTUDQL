@@ -16,5 +16,10 @@ namespace DALTUDQL_1660007_1660010_1660136
         {
             InitializeComponent();
         }
+
+        private void btnBCSDT_Thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

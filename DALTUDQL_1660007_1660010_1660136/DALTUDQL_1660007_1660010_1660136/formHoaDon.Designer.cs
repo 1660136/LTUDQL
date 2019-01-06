@@ -50,6 +50,7 @@
             this.btnHoaDon_Thoat.TabIndex = 39;
             this.btnHoaDon_Thoat.Text = "THOÁT";
             this.btnHoaDon_Thoat.UseVisualStyleBackColor = true;
+            this.btnHoaDon_Thoat.Click += new System.EventHandler(this.btnHoaDon_Thoat_Click);
             // 
             // dateTimeHoaDon_NgayKham
             // 

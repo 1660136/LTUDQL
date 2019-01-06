@@ -16,5 +16,16 @@ namespace DALTUDQL_1660007_1660010_1660136
         {
             InitializeComponent();
         }
+
+        private void btnPKB_Thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnPKB_LapHoaDon_Click(object sender, EventArgs e)
+        {
+            formHoaDon hoadon = new formHoaDon();
+            hoadon.Show();
+        }
     }
 }

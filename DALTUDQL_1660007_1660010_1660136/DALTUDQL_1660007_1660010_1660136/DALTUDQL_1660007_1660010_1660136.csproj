@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BenhNhan.cs" />
     <Compile Include="formBCDT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +92,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provider.cs" />
+    <Compile Include="QuanLyBenhNhan.cs" />
+    <Compile Include="QuanLyThuoc.cs" />
+    <Compile Include="Thuoc.cs" />
     <EmbeddedResource Include="formBCDT.resx">
       <DependentUpon>formBCDT.cs</DependentUpon>
     </EmbeddedResource>

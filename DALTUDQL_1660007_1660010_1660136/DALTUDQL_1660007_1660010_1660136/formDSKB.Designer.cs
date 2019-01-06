@@ -31,9 +31,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridViewDSKB = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBoxDSKB_Nu = new System.Windows.Forms.CheckBox();
             this.dateTimeDSKB_NamSinh = new System.Windows.Forms.DateTimePicker();
-            this.checkBoxDSKB_Nam = new System.Windows.Forms.CheckBox();
             this.textBoxDSKB_DiaChi = new System.Windows.Forms.TextBox();
             this.textBoxDSKB_HoTen = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,6 +48,8 @@
             this.btnDSKB_Them = new System.Windows.Forms.Button();
             this.btnDSKB_Huy = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.RadioCheckBoxDSKB_Nu = new System.Windows.Forms.RadioButton();
+            this.RadioCheckBoxDSKB_Nam = new System.Windows.Forms.RadioButton();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSKB)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -77,9 +77,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBoxDSKB_Nu);
+            this.groupBox1.Controls.Add(this.RadioCheckBoxDSKB_Nam);
+            this.groupBox1.Controls.Add(this.RadioCheckBoxDSKB_Nu);
             this.groupBox1.Controls.Add(this.dateTimeDSKB_NamSinh);
-            this.groupBox1.Controls.Add(this.checkBoxDSKB_Nam);
             this.groupBox1.Controls.Add(this.textBoxDSKB_DiaChi);
             this.groupBox1.Controls.Add(this.textBoxDSKB_HoTen);
             this.groupBox1.Controls.Add(this.label5);
@@ -93,16 +93,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin bệnh nhân";
             // 
-            // checkBoxDSKB_Nu
-            // 
-            this.checkBoxDSKB_Nu.AutoSize = true;
-            this.checkBoxDSKB_Nu.Location = new System.Drawing.Point(124, 56);
-            this.checkBoxDSKB_Nu.Name = "checkBoxDSKB_Nu";
-            this.checkBoxDSKB_Nu.Size = new System.Drawing.Size(40, 17);
-            this.checkBoxDSKB_Nu.TabIndex = 2;
-            this.checkBoxDSKB_Nu.Text = "Nữ";
-            this.checkBoxDSKB_Nu.UseVisualStyleBackColor = true;
-            // 
             // dateTimeDSKB_NamSinh
             // 
             this.dateTimeDSKB_NamSinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -111,16 +101,6 @@
             this.dateTimeDSKB_NamSinh.Name = "dateTimeDSKB_NamSinh";
             this.dateTimeDSKB_NamSinh.Size = new System.Drawing.Size(166, 20);
             this.dateTimeDSKB_NamSinh.TabIndex = 1;
-            // 
-            // checkBoxDSKB_Nam
-            // 
-            this.checkBoxDSKB_Nam.AutoSize = true;
-            this.checkBoxDSKB_Nam.Location = new System.Drawing.Point(70, 57);
-            this.checkBoxDSKB_Nam.Name = "checkBoxDSKB_Nam";
-            this.checkBoxDSKB_Nam.Size = new System.Drawing.Size(48, 17);
-            this.checkBoxDSKB_Nam.TabIndex = 2;
-            this.checkBoxDSKB_Nam.Text = "Nam";
-            this.checkBoxDSKB_Nam.UseVisualStyleBackColor = true;
             // 
             // textBoxDSKB_DiaChi
             // 
@@ -233,6 +213,7 @@
             this.btnDSKB_Thoat.TabIndex = 3;
             this.btnDSKB_Thoat.Text = "THOÁT";
             this.btnDSKB_Thoat.UseVisualStyleBackColor = true;
+            this.btnDSKB_Thoat.Click += new System.EventHandler(this.btnDSKB_Thoat_Click);
             // 
             // btnDSKB_Sua
             // 
@@ -275,6 +256,28 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
             // 
+            // RadioCheckBoxDSKB_Nu
+            // 
+            this.RadioCheckBoxDSKB_Nu.AutoSize = true;
+            this.RadioCheckBoxDSKB_Nu.Location = new System.Drawing.Point(135, 56);
+            this.RadioCheckBoxDSKB_Nu.Name = "RadioCheckBoxDSKB_Nu";
+            this.RadioCheckBoxDSKB_Nu.Size = new System.Drawing.Size(39, 17);
+            this.RadioCheckBoxDSKB_Nu.TabIndex = 3;
+            this.RadioCheckBoxDSKB_Nu.TabStop = true;
+            this.RadioCheckBoxDSKB_Nu.Text = "Nữ";
+            this.RadioCheckBoxDSKB_Nu.UseVisualStyleBackColor = true;
+            // 
+            // RadioCheckBoxDSKB_Nam
+            // 
+            this.RadioCheckBoxDSKB_Nam.AutoSize = true;
+            this.RadioCheckBoxDSKB_Nam.Location = new System.Drawing.Point(70, 56);
+            this.RadioCheckBoxDSKB_Nam.Name = "RadioCheckBoxDSKB_Nam";
+            this.RadioCheckBoxDSKB_Nam.Size = new System.Drawing.Size(47, 17);
+            this.RadioCheckBoxDSKB_Nam.TabIndex = 4;
+            this.RadioCheckBoxDSKB_Nam.TabStop = true;
+            this.RadioCheckBoxDSKB_Nam.Text = "Nam";
+            this.RadioCheckBoxDSKB_Nam.UseVisualStyleBackColor = true;
+            // 
             // formDSKB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,9 +308,7 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dataGridViewDSKB;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBoxDSKB_Nu;
         private System.Windows.Forms.DateTimePicker dateTimeDSKB_NamSinh;
-        private System.Windows.Forms.CheckBox checkBoxDSKB_Nam;
         private System.Windows.Forms.TextBox textBoxDSKB_DiaChi;
         private System.Windows.Forms.TextBox textBoxDSKB_HoTen;
         private System.Windows.Forms.Label label5;
@@ -324,5 +325,7 @@
         private System.Windows.Forms.Button btnDSKB_Them;
         private System.Windows.Forms.Button btnDSKB_Huy;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton RadioCheckBoxDSKB_Nam;
+        private System.Windows.Forms.RadioButton RadioCheckBoxDSKB_Nu;
     }
 }

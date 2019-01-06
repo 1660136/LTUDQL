@@ -57,6 +57,7 @@
             this.btnDSBN_Thoat.TabIndex = 34;
             this.btnDSBN_Thoat.Text = "THOÁT";
             this.btnDSBN_Thoat.UseVisualStyleBackColor = true;
+            this.btnDSBN_Thoat.Click += new System.EventHandler(this.btnDSBN_Thoat_Click);
             // 
             // btnDSBN_Sua
             // 

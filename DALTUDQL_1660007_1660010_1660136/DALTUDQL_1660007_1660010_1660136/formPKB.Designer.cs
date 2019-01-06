@@ -58,6 +58,7 @@
             this.btnPKB_Thoat.TabIndex = 26;
             this.btnPKB_Thoat.Text = "THOÁT";
             this.btnPKB_Thoat.UseVisualStyleBackColor = true;
+            this.btnPKB_Thoat.Click += new System.EventHandler(this.btnPKB_Thoat_Click);
             // 
             // btnPKB_Sua
             // 
@@ -204,6 +205,7 @@
             this.btnPKB_LapHoaDon.TabIndex = 28;
             this.btnPKB_LapHoaDon.Text = "LẬP HÓA ĐƠN";
             this.btnPKB_LapHoaDon.UseVisualStyleBackColor = true;
+            this.btnPKB_LapHoaDon.Click += new System.EventHandler(this.btnPKB_LapHoaDon_Click);
             // 
             // formPKB
             // 

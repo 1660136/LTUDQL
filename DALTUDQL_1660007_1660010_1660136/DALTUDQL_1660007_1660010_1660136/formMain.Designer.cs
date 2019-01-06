@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnBaoCao_SDThuoc = new System.Windows.Forms.Button();
             this.tabBC = new System.Windows.Forms.TabPage();
@@ -40,7 +37,9 @@
             this.btnQLT_Xoa = new System.Windows.Forms.Button();
             this.groupBoxTTThuoc = new System.Windows.Forms.GroupBox();
             this.textBoxQLT_DonGia = new System.Windows.Forms.TextBox();
+            this.textBoxQLT_SoLuongTon = new System.Windows.Forms.TextBox();
             this.textBoxQLT_DonViTinh = new System.Windows.Forms.TextBox();
+            this.lbSoLuongTon = new System.Windows.Forms.Label();
             this.textBoxQLT_TenThuoc = new System.Windows.Forms.TextBox();
             this.lbDonViTinh = new System.Windows.Forms.Label();
             this.lbDonGia = new System.Windows.Forms.Label();
@@ -71,6 +70,7 @@
             this.btnBaoCao_SDThuoc.TabIndex = 2;
             this.btnBaoCao_SDThuoc.Text = "BÁO CÁO SỬ DỤNG THUỐC";
             this.btnBaoCao_SDThuoc.UseVisualStyleBackColor = true;
+            this.btnBaoCao_SDThuoc.Click += new System.EventHandler(this.btnBaoCao_SDThuoc_Click);
             // 
             // tabBC
             // 
@@ -92,36 +92,13 @@
             this.btnBaoCao_DoanhThu.TabIndex = 3;
             this.btnBaoCao_DoanhThu.Text = "BÁO CÁO DANH THU";
             this.btnBaoCao_DoanhThu.UseVisualStyleBackColor = true;
+            this.btnBaoCao_DoanhThu.Click += new System.EventHandler(this.btnBaoCao_DoanhThu_Click);
             // 
             // dataDSThuoc
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataDSThuoc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataDSThuoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataDSThuoc.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataDSThuoc.Location = new System.Drawing.Point(5, 20);
             this.dataDSThuoc.Name = "dataDSThuoc";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataDSThuoc.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataDSThuoc.Size = new System.Drawing.Size(829, 247);
             this.dataDSThuoc.TabIndex = 0;
             // 
@@ -147,7 +124,9 @@
             // groupBoxTTThuoc
             // 
             this.groupBoxTTThuoc.Controls.Add(this.textBoxQLT_DonGia);
+            this.groupBoxTTThuoc.Controls.Add(this.textBoxQLT_SoLuongTon);
             this.groupBoxTTThuoc.Controls.Add(this.textBoxQLT_DonViTinh);
+            this.groupBoxTTThuoc.Controls.Add(this.lbSoLuongTon);
             this.groupBoxTTThuoc.Controls.Add(this.textBoxQLT_TenThuoc);
             this.groupBoxTTThuoc.Controls.Add(this.lbDonViTinh);
             this.groupBoxTTThuoc.Controls.Add(this.lbDonGia);
@@ -166,12 +145,30 @@
             this.textBoxQLT_DonGia.Size = new System.Drawing.Size(166, 20);
             this.textBoxQLT_DonGia.TabIndex = 1;
             // 
+            // textBoxQLT_SoLuongTon
+            // 
+            this.textBoxQLT_SoLuongTon.Location = new System.Drawing.Point(436, 57);
+            this.textBoxQLT_SoLuongTon.Name = "textBoxQLT_SoLuongTon";
+            this.textBoxQLT_SoLuongTon.Size = new System.Drawing.Size(87, 20);
+            this.textBoxQLT_SoLuongTon.TabIndex = 1;
+            this.textBoxQLT_SoLuongTon.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // textBoxQLT_DonViTinh
             // 
-            this.textBoxQLT_DonViTinh.Location = new System.Drawing.Point(416, 28);
+            this.textBoxQLT_DonViTinh.Location = new System.Drawing.Point(436, 28);
             this.textBoxQLT_DonViTinh.Name = "textBoxQLT_DonViTinh";
             this.textBoxQLT_DonViTinh.Size = new System.Drawing.Size(87, 20);
             this.textBoxQLT_DonViTinh.TabIndex = 1;
+            // 
+            // lbSoLuongTon
+            // 
+            this.lbSoLuongTon.AutoSize = true;
+            this.lbSoLuongTon.Location = new System.Drawing.Point(350, 60);
+            this.lbSoLuongTon.Name = "lbSoLuongTon";
+            this.lbSoLuongTon.Size = new System.Drawing.Size(75, 13);
+            this.lbSoLuongTon.TabIndex = 0;
+            this.lbSoLuongTon.Text = "Số Lượng Tồn";
+            this.lbSoLuongTon.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBoxQLT_TenThuoc
             // 
@@ -258,6 +255,7 @@
             this.btnQLBN_DSBN.TabIndex = 0;
             this.btnQLBN_DSBN.Text = "DANH SÁCH BỆNH NHÂN";
             this.btnQLBN_DSBN.UseVisualStyleBackColor = true;
+            this.btnQLBN_DSBN.Click += new System.EventHandler(this.btnQLBN_DSBN_Click);
             // 
             // btnQLBN_PKB
             // 
@@ -267,6 +265,7 @@
             this.btnQLBN_PKB.TabIndex = 0;
             this.btnQLBN_PKB.Text = "PHIẾU KHÁM BỆNH";
             this.btnQLBN_PKB.UseVisualStyleBackColor = true;
+            this.btnQLBN_PKB.Click += new System.EventHandler(this.btnQLBN_PKB_Click);
             // 
             // tabsFrmMain
             // 
@@ -301,14 +300,15 @@
             this.btnQLBN_DSKB.TabIndex = 0;
             this.btnQLBN_DSKB.Text = "DANH SÁCH KHÁM BỆNH";
             this.btnQLBN_DSKB.UseVisualStyleBackColor = true;
+            this.btnQLBN_DSKB.Click += new System.EventHandler(this.btnQLBN_DSKB_Click);
             // 
-            // frmMain
+            // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.tabsFrmMain);
-            this.Name = "frmMain";
+            this.Name = "formMain";
             this.Text = "Quản lý phòng mạch";
             this.tabBC.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataDSThuoc)).EndInit();
@@ -347,6 +347,8 @@
         private System.Windows.Forms.TabControl tabsFrmMain;
         private System.Windows.Forms.TabPage tabQLBN;
         private System.Windows.Forms.Button btnQLBN_DSKB;
+        private System.Windows.Forms.TextBox textBoxQLT_SoLuongTon;
+        private System.Windows.Forms.Label lbSoLuongTon;
     }
 }
 
