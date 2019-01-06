@@ -34,7 +34,6 @@
             this.dateTimePKB_NgayKham = new System.Windows.Forms.DateTimePicker();
             this.textBoxPKB_TrieuChung = new System.Windows.Forms.TextBox();
             this.textBoxPKB_DuDoanBenh = new System.Windows.Forms.TextBox();
-            this.textBoxPKB_HoTen = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnPKB_Them = new System.Windows.Forms.Button();
             this.btnPKB_Xoa = new System.Windows.Forms.Button();
@@ -45,6 +44,7 @@
             this.groupBoxTTBN = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnPKB_LapHoaDon = new System.Windows.Forms.Button();
+            this.cbbPKB_HoTen = new System.Windows.Forms.ComboBox();
             this.groupBoxTTPKB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTTPKB)).BeginInit();
             this.groupBoxTTBN.SuspendLayout();
@@ -100,13 +100,6 @@
             this.textBoxPKB_DuDoanBenh.Name = "textBoxPKB_DuDoanBenh";
             this.textBoxPKB_DuDoanBenh.Size = new System.Drawing.Size(166, 20);
             this.textBoxPKB_DuDoanBenh.TabIndex = 1;
-            // 
-            // textBoxPKB_HoTen
-            // 
-            this.textBoxPKB_HoTen.Location = new System.Drawing.Point(112, 28);
-            this.textBoxPKB_HoTen.Name = "textBoxPKB_HoTen";
-            this.textBoxPKB_HoTen.Size = new System.Drawing.Size(166, 20);
-            this.textBoxPKB_HoTen.TabIndex = 1;
             // 
             // label5
             // 
@@ -173,10 +166,10 @@
             // 
             // groupBoxTTBN
             // 
+            this.groupBoxTTBN.Controls.Add(this.cbbPKB_HoTen);
             this.groupBoxTTBN.Controls.Add(this.dateTimePKB_NgayKham);
             this.groupBoxTTBN.Controls.Add(this.textBoxPKB_TrieuChung);
             this.groupBoxTTBN.Controls.Add(this.textBoxPKB_DuDoanBenh);
-            this.groupBoxTTBN.Controls.Add(this.textBoxPKB_HoTen);
             this.groupBoxTTBN.Controls.Add(this.label5);
             this.groupBoxTTBN.Controls.Add(this.label4);
             this.groupBoxTTBN.Controls.Add(this.label3);
@@ -206,6 +199,14 @@
             this.btnPKB_LapHoaDon.Text = "LẬP HÓA ĐƠN";
             this.btnPKB_LapHoaDon.UseVisualStyleBackColor = true;
             this.btnPKB_LapHoaDon.Click += new System.EventHandler(this.btnPKB_LapHoaDon_Click);
+            // 
+            // cbbPKB_HoTen
+            // 
+            this.cbbPKB_HoTen.FormattingEnabled = true;
+            this.cbbPKB_HoTen.Location = new System.Drawing.Point(112, 28);
+            this.cbbPKB_HoTen.Name = "cbbPKB_HoTen";
+            this.cbbPKB_HoTen.Size = new System.Drawing.Size(166, 21);
+            this.cbbPKB_HoTen.TabIndex = 2;
             // 
             // formPKB
             // 
@@ -238,7 +239,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePKB_NgayKham;
         private System.Windows.Forms.TextBox textBoxPKB_TrieuChung;
         private System.Windows.Forms.TextBox textBoxPKB_DuDoanBenh;
-        private System.Windows.Forms.TextBox textBoxPKB_HoTen;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnPKB_Them;
         private System.Windows.Forms.Button btnPKB_Xoa;
@@ -249,5 +249,6 @@
         private System.Windows.Forms.GroupBox groupBoxTTBN;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnPKB_LapHoaDon;
+        private System.Windows.Forms.ComboBox cbbPKB_HoTen;
     }
 }
