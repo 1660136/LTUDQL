@@ -33,15 +33,30 @@
             this.btnBCSDT_Thoat = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLanDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
+            this.Thuoc,
+            this.DonViTinh,
+            this.SoLuong,
+            this.SoLanDung});
             this.dataGridView1.Location = new System.Drawing.Point(0, 19);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(632, 182);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -82,6 +97,36 @@
             this.label1.TabIndex = 30;
             this.label1.Text = "Tháng";
             // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            // 
+            // Thuoc
+            // 
+            this.Thuoc.HeaderText = "Thuốc";
+            this.Thuoc.Name = "Thuoc";
+            this.Thuoc.ReadOnly = true;
+            // 
+            // DonViTinh
+            // 
+            this.DonViTinh.HeaderText = "Đơn Vị Tính";
+            this.DonViTinh.Name = "DonViTinh";
+            this.DonViTinh.ReadOnly = true;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
+            // 
+            // SoLanDung
+            // 
+            this.SoLanDung.HeaderText = "Số Lần Dùng";
+            this.SoLanDung.Name = "SoLanDung";
+            this.SoLanDung.ReadOnly = true;
+            // 
             // formBCSDT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -93,6 +138,8 @@
             this.Controls.Add(this.label1);
             this.Name = "formBCSDT";
             this.Text = "Báo cáo sử dụng thuốc";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formBCSDT_FormClosed);
+            this.Load += new System.EventHandler(this.formBCSDT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -107,5 +154,10 @@
         private System.Windows.Forms.Button btnBCSDT_Thoat;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Thuoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonViTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLanDung;
     }
 }

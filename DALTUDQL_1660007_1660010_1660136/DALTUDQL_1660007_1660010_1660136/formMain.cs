@@ -30,30 +30,35 @@ namespace DALTUDQL_1660007_1660010_1660136
         private void btnQLBN_DSKB_Click(object sender, EventArgs e)
         {
             formDSKB dskb = new formDSKB();
+            dskb.Owner = this;
             dskb.Show();
         }
 
         private void btnQLBN_PKB_Click(object sender, EventArgs e)
         {
             formPKB pkb = new formPKB();
+            pkb.Owner = this;
             pkb.Show();
         }
 
         private void btnQLBN_DSBN_Click(object sender, EventArgs e)
         {
             formDSBN dsbn = new formDSBN();
+            dsbn.Owner = this;
             dsbn.Show();
         }
 
         private void btnBaoCao_DoanhThu_Click(object sender, EventArgs e)
         {
             formBCDT bcdt = new formBCDT();
+            bcdt.Owner = this;
             bcdt.Show();
         }
 
         private void btnBaoCao_SDThuoc_Click(object sender, EventArgs e)
         {
             formBCSDT bcsdt = new formBCSDT();
+            bcsdt.Owner = this;
             bcsdt.Show();
         }
     }

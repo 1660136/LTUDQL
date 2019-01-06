@@ -31,6 +31,8 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridViewDSKB = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.RadioCheckBoxDSKB_Nam = new System.Windows.Forms.RadioButton();
+            this.RadioCheckBoxDSKB_Nu = new System.Windows.Forms.RadioButton();
             this.dateTimeDSKB_NamSinh = new System.Windows.Forms.DateTimePicker();
             this.textBoxDSKB_DiaChi = new System.Windows.Forms.TextBox();
             this.textBoxDSKB_HoTen = new System.Windows.Forms.TextBox();
@@ -48,8 +50,11 @@
             this.btnDSKB_Them = new System.Windows.Forms.Button();
             this.btnDSKB_Huy = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.RadioCheckBoxDSKB_Nu = new System.Windows.Forms.RadioButton();
-            this.RadioCheckBoxDSKB_Nam = new System.Windows.Forms.RadioButton();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSKB)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -69,11 +74,22 @@
             // 
             // dataGridViewDSKB
             // 
+            this.dataGridViewDSKB.AllowUserToAddRows = false;
+            this.dataGridViewDSKB.AllowUserToDeleteRows = false;
+            this.dataGridViewDSKB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewDSKB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDSKB.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
+            this.HoTen,
+            this.GioiTinh,
+            this.NamSinh,
+            this.DiaChi});
             this.dataGridViewDSKB.Location = new System.Drawing.Point(5, 20);
             this.dataGridViewDSKB.Name = "dataGridViewDSKB";
+            this.dataGridViewDSKB.ReadOnly = true;
             this.dataGridViewDSKB.Size = new System.Drawing.Size(632, 182);
             this.dataGridViewDSKB.TabIndex = 0;
+            this.dataGridViewDSKB.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDSKB_CellContentClick);
             // 
             // groupBox1
             // 
@@ -92,6 +108,28 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin bệnh nhân";
+            // 
+            // RadioCheckBoxDSKB_Nam
+            // 
+            this.RadioCheckBoxDSKB_Nam.AutoSize = true;
+            this.RadioCheckBoxDSKB_Nam.Location = new System.Drawing.Point(70, 56);
+            this.RadioCheckBoxDSKB_Nam.Name = "RadioCheckBoxDSKB_Nam";
+            this.RadioCheckBoxDSKB_Nam.Size = new System.Drawing.Size(47, 17);
+            this.RadioCheckBoxDSKB_Nam.TabIndex = 4;
+            this.RadioCheckBoxDSKB_Nam.TabStop = true;
+            this.RadioCheckBoxDSKB_Nam.Text = "Nam";
+            this.RadioCheckBoxDSKB_Nam.UseVisualStyleBackColor = true;
+            // 
+            // RadioCheckBoxDSKB_Nu
+            // 
+            this.RadioCheckBoxDSKB_Nu.AutoSize = true;
+            this.RadioCheckBoxDSKB_Nu.Location = new System.Drawing.Point(135, 56);
+            this.RadioCheckBoxDSKB_Nu.Name = "RadioCheckBoxDSKB_Nu";
+            this.RadioCheckBoxDSKB_Nu.Size = new System.Drawing.Size(39, 17);
+            this.RadioCheckBoxDSKB_Nu.TabIndex = 3;
+            this.RadioCheckBoxDSKB_Nu.TabStop = true;
+            this.RadioCheckBoxDSKB_Nu.Text = "Nữ";
+            this.RadioCheckBoxDSKB_Nu.UseVisualStyleBackColor = true;
             // 
             // dateTimeDSKB_NamSinh
             // 
@@ -256,27 +294,30 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
             // 
-            // RadioCheckBoxDSKB_Nu
+            // STT
             // 
-            this.RadioCheckBoxDSKB_Nu.AutoSize = true;
-            this.RadioCheckBoxDSKB_Nu.Location = new System.Drawing.Point(135, 56);
-            this.RadioCheckBoxDSKB_Nu.Name = "RadioCheckBoxDSKB_Nu";
-            this.RadioCheckBoxDSKB_Nu.Size = new System.Drawing.Size(39, 17);
-            this.RadioCheckBoxDSKB_Nu.TabIndex = 3;
-            this.RadioCheckBoxDSKB_Nu.TabStop = true;
-            this.RadioCheckBoxDSKB_Nu.Text = "Nữ";
-            this.RadioCheckBoxDSKB_Nu.UseVisualStyleBackColor = true;
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
             // 
-            // RadioCheckBoxDSKB_Nam
+            // HoTen
             // 
-            this.RadioCheckBoxDSKB_Nam.AutoSize = true;
-            this.RadioCheckBoxDSKB_Nam.Location = new System.Drawing.Point(70, 56);
-            this.RadioCheckBoxDSKB_Nam.Name = "RadioCheckBoxDSKB_Nam";
-            this.RadioCheckBoxDSKB_Nam.Size = new System.Drawing.Size(47, 17);
-            this.RadioCheckBoxDSKB_Nam.TabIndex = 4;
-            this.RadioCheckBoxDSKB_Nam.TabStop = true;
-            this.RadioCheckBoxDSKB_Nam.Text = "Nam";
-            this.RadioCheckBoxDSKB_Nam.UseVisualStyleBackColor = true;
+            this.HoTen.HeaderText = "Họ Tên";
+            this.HoTen.Name = "HoTen";
+            // 
+            // GioiTinh
+            // 
+            this.GioiTinh.HeaderText = "Giới Tính";
+            this.GioiTinh.Name = "GioiTinh";
+            // 
+            // NamSinh
+            // 
+            this.NamSinh.HeaderText = "Năm Sinh";
+            this.NamSinh.Name = "NamSinh";
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.HeaderText = "Địa Chỉ";
+            this.DiaChi.Name = "DiaChi";
             // 
             // formDSKB
             // 
@@ -292,6 +333,8 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "formDSKB";
             this.Text = "Danh sách khám bệnh";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formDSKB_FormClosed);
+            this.Load += new System.EventHandler(this.formDSKB_Load);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSKB)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -327,5 +370,10 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton RadioCheckBoxDSKB_Nam;
         private System.Windows.Forms.RadioButton RadioCheckBoxDSKB_Nu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NamSinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
     }
 }
