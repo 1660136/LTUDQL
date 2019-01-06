@@ -21,5 +21,10 @@ namespace DALTUDQL_1660007_1660010_1660136
         {
             this.Close();
         }
+
+        private void dataGridViewDSKB_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

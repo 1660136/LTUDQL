@@ -36,7 +36,6 @@
             this.textBoxDSBN_HoTen = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnDSBN_Them = new System.Windows.Forms.Button();
             this.btnDSBN_Xoa = new System.Windows.Forms.Button();
             this.textBoxDSBN_LoaiBenh = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,6 +43,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewDSBN = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayKham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiBenh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrieuChung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSBN)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -51,7 +55,10 @@
             // 
             // btnDSBN_Thoat
             // 
-            this.btnDSBN_Thoat.Location = new System.Drawing.Point(463, 119);
+            this.btnDSBN_Thoat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDSBN_Thoat.Location = new System.Drawing.Point(419, 120);
             this.btnDSBN_Thoat.Name = "btnDSBN_Thoat";
             this.btnDSBN_Thoat.Size = new System.Drawing.Size(75, 23);
             this.btnDSBN_Thoat.TabIndex = 34;
@@ -61,7 +68,10 @@
             // 
             // btnDSBN_Sua
             // 
-            this.btnDSBN_Sua.Location = new System.Drawing.Point(218, 119);
+            this.btnDSBN_Sua.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDSBN_Sua.Location = new System.Drawing.Point(176, 120);
             this.btnDSBN_Sua.Name = "btnDSBN_Sua";
             this.btnDSBN_Sua.Size = new System.Drawing.Size(75, 23);
             this.btnDSBN_Sua.TabIndex = 35;
@@ -70,7 +80,10 @@
             // 
             // btnDSBN_Huy
             // 
-            this.btnDSBN_Huy.Location = new System.Drawing.Point(377, 119);
+            this.btnDSBN_Huy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDSBN_Huy.Location = new System.Drawing.Point(338, 120);
             this.btnDSBN_Huy.Name = "btnDSBN_Huy";
             this.btnDSBN_Huy.Size = new System.Drawing.Size(75, 23);
             this.btnDSBN_Huy.TabIndex = 36;
@@ -118,18 +131,12 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Ngày khám";
             // 
-            // btnDSBN_Them
-            // 
-            this.btnDSBN_Them.Location = new System.Drawing.Point(137, 119);
-            this.btnDSBN_Them.Name = "btnDSBN_Them";
-            this.btnDSBN_Them.Size = new System.Drawing.Size(75, 23);
-            this.btnDSBN_Them.TabIndex = 32;
-            this.btnDSBN_Them.Text = "THÊM";
-            this.btnDSBN_Them.UseVisualStyleBackColor = true;
-            // 
             // btnDSBN_Xoa
             // 
-            this.btnDSBN_Xoa.Location = new System.Drawing.Point(299, 119);
+            this.btnDSBN_Xoa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDSBN_Xoa.Location = new System.Drawing.Point(257, 120);
             this.btnDSBN_Xoa.Name = "btnDSBN_Xoa";
             this.btnDSBN_Xoa.Size = new System.Drawing.Size(75, 23);
             this.btnDSBN_Xoa.TabIndex = 33;
@@ -180,9 +187,19 @@
             // 
             // dataGridViewDSBN
             // 
+            this.dataGridViewDSBN.AllowUserToAddRows = false;
+            this.dataGridViewDSBN.AllowUserToDeleteRows = false;
+            this.dataGridViewDSBN.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewDSBN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDSBN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
+            this.HoTen,
+            this.NgayKham,
+            this.LoaiBenh,
+            this.TrieuChung});
             this.dataGridViewDSBN.Location = new System.Drawing.Point(5, 20);
             this.dataGridViewDSBN.Name = "dataGridViewDSBN";
+            this.dataGridViewDSBN.ReadOnly = true;
             this.dataGridViewDSBN.Size = new System.Drawing.Size(632, 205);
             this.dataGridViewDSBN.TabIndex = 0;
             // 
@@ -196,6 +213,36 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh sách bệnh nhân";
             // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            // 
+            // HoTen
+            // 
+            this.HoTen.HeaderText = "Họ Tên";
+            this.HoTen.Name = "HoTen";
+            this.HoTen.ReadOnly = true;
+            // 
+            // NgayKham
+            // 
+            this.NgayKham.HeaderText = "Ngày Khám";
+            this.NgayKham.Name = "NgayKham";
+            this.NgayKham.ReadOnly = true;
+            // 
+            // LoaiBenh
+            // 
+            this.LoaiBenh.HeaderText = "Loại Bệnh";
+            this.LoaiBenh.Name = "LoaiBenh";
+            this.LoaiBenh.ReadOnly = true;
+            // 
+            // TrieuChung
+            // 
+            this.TrieuChung.HeaderText = "Triệu Chứng";
+            this.TrieuChung.Name = "TrieuChung";
+            this.TrieuChung.ReadOnly = true;
+            // 
             // formDSBN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,7 +251,6 @@
             this.Controls.Add(this.btnDSBN_Thoat);
             this.Controls.Add(this.btnDSBN_Sua);
             this.Controls.Add(this.btnDSBN_Huy);
-            this.Controls.Add(this.btnDSBN_Them);
             this.Controls.Add(this.btnDSBN_Xoa);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
@@ -228,7 +274,6 @@
         private System.Windows.Forms.TextBox textBoxDSBN_HoTen;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnDSBN_Them;
         private System.Windows.Forms.Button btnDSBN_Xoa;
         private System.Windows.Forms.TextBox textBoxDSBN_LoaiBenh;
         private System.Windows.Forms.Label label3;
@@ -236,5 +281,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridViewDSBN;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayKham;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiBenh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TrieuChung;
     }
 }

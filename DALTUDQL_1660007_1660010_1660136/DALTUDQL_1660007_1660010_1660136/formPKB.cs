@@ -27,5 +27,16 @@ namespace DALTUDQL_1660007_1660010_1660136
             formHoaDon hoadon = new formHoaDon();
             hoadon.Show();
         }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void formPKB_Load(object sender, EventArgs e)
+        {
+            listViewPKB.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            listViewPKB.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+        }
     }
 }

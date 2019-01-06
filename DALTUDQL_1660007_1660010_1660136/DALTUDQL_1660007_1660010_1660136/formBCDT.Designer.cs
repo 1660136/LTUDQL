@@ -33,6 +33,11 @@
             this.btnBCDT_Thoat = new System.Windows.Forms.Button();
             this.cbbBCDT_Thang = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ngay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoBenhNhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DoanhThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TyLe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBCDT)).BeginInit();
             this.SuspendLayout();
@@ -49,9 +54,19 @@
             // 
             // dataGridViewBCDT
             // 
+            this.dataGridViewBCDT.AllowUserToAddRows = false;
+            this.dataGridViewBCDT.AllowUserToDeleteRows = false;
+            this.dataGridViewBCDT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewBCDT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBCDT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
+            this.Ngay,
+            this.SoBenhNhan,
+            this.DoanhThu,
+            this.TyLe});
             this.dataGridViewBCDT.Location = new System.Drawing.Point(0, 19);
             this.dataGridViewBCDT.Name = "dataGridViewBCDT";
+            this.dataGridViewBCDT.ReadOnly = true;
             this.dataGridViewBCDT.Size = new System.Drawing.Size(632, 182);
             this.dataGridViewBCDT.TabIndex = 0;
             // 
@@ -82,6 +97,36 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Tháng";
             // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            // 
+            // Ngay
+            // 
+            this.Ngay.HeaderText = "Ngày";
+            this.Ngay.Name = "Ngay";
+            this.Ngay.ReadOnly = true;
+            // 
+            // SoBenhNhan
+            // 
+            this.SoBenhNhan.HeaderText = "Số Bệnh Nhân";
+            this.SoBenhNhan.Name = "SoBenhNhan";
+            this.SoBenhNhan.ReadOnly = true;
+            // 
+            // DoanhThu
+            // 
+            this.DoanhThu.HeaderText = "Doanh Thu";
+            this.DoanhThu.Name = "DoanhThu";
+            this.DoanhThu.ReadOnly = true;
+            // 
+            // TyLe
+            // 
+            this.TyLe.HeaderText = "Tỷ Lệ";
+            this.TyLe.Name = "TyLe";
+            this.TyLe.ReadOnly = true;
+            // 
             // formBCDT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,5 +152,10 @@
         private System.Windows.Forms.Button btnBCDT_Thoat;
         private System.Windows.Forms.ComboBox cbbBCDT_Thang;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ngay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoBenhNhan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DoanhThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TyLe;
     }
 }
