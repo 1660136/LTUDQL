@@ -404,12 +404,12 @@ go
 
 --hàm xóa Thuốc--
 CREATE PROC XoaThuoc
-@id int
+@Ten nvarchar
 AS
 BEGIN
 UPDATE THUOC 
 SET DaXoa=1
-WHERE IDThuoc=@id
+WHERE IDThuoc=@ten
 
 END
 go
@@ -625,3 +625,28 @@ UPDATE dbo.	BAOCAOTHUOC
 SET Soluong=Soluong+@soluong,SoLan=SoLan+1
 END
 END
+
+--hàm load danh sách bệnh nhân trong ngày đó ( thời gian lấy từ thời gian hệ thống )
+create proc loadDSBNinDay
+as
+begin
+select distinct bn.IDBN,bn.TenBN,bn.GioiTinh,bn.NgaySinh,bn.DiaChi
+from BENHNHAN bn join PHIEUKHAM pk on bn.IDBN=pk.IDBN
+where pk.NgayKham in (SELECT convert(varchar, getdate(), 111))
+end
+go
+--drop proc loadDSBNinDay
+exec loadDSBNinDay
+go
+
+
+--hàm load tên thuốc để chọn
+create proc loadListMedicineToSelect
+as
+begin
+	select distinct THUOC.TenThuoc
+	from THUOC
+end
+go
+
+exec loadListMedicineToSelect

@@ -11,7 +11,7 @@ namespace DALTUDQL_1660007_1660010_1660136
     class Provider
     {
         SqlConnection Connection { get; set; }
-        string connectionString = @"Data Source=PM2E-GV\MSSQLSERVER2014;Initial Catalog=QuanLyLopHocDB;Persist Security Info=True;User ID=sa;Password=ttth";
+        string connectionString = @"Data Source=DESKTOP-U1LHV6Q\SQLEXPRESS;Initial Catalog=PMach;User ID=sa;Password=12345";
         public void Connect()
         {
             try
@@ -54,6 +54,24 @@ namespace DALTUDQL_1660007_1660010_1660136
                     Command.Parameters.AddRange(parameters);
                 nRows = Command.ExecuteNonQuery();
                 return nRows;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+        public DataTable Select(CommandType cmdType, string strQuery)
+        {
+            try
+            {
+                SqlCommand command = Connection.CreateCommand();
+                command.CommandType = cmdType;
+                command.CommandText = strQuery;
+
+                SqlDataAdapter da = new SqlDataAdapter(command);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
             }
             catch (SqlException ex)
             {

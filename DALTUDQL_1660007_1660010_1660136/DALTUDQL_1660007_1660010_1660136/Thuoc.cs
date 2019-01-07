@@ -10,10 +10,10 @@ namespace DALTUDQL_1660007_1660010_1660136
     {
         private int _iDThuoc;
         private string _tenThuoc;
-        private string _donVi;
+        private int _iDDonVi;
         private int _soLuongTon;
-        private float _gia;
-        private bool _xoa;
+        private int _gia;
+        private int _xoa;
 
         public int IDThuoc
         {
@@ -41,29 +41,16 @@ namespace DALTUDQL_1660007_1660010_1660136
             }
         }
 
-        public string DonVi
+        public int IDDonVi
         {
             get
             {
-                return _donVi;
+                return _iDDonVi;
             }
 
             set
             {
-                _donVi = value;
-            }
-        }
-
-        public float Gia
-        {
-            get
-            {
-                return _gia;
-            }
-
-            set
-            {
-                _gia = value;
+                _iDDonVi = value;
             }
         }
 
@@ -80,7 +67,20 @@ namespace DALTUDQL_1660007_1660010_1660136
             }
         }
 
-        public bool Xoa
+        public int Gia
+        {
+            get
+            {
+                return _gia;
+            }
+
+            set
+            {
+                _gia = value;
+            }
+        }
+
+        public int Xoa
         {
             get
             {
@@ -93,14 +93,14 @@ namespace DALTUDQL_1660007_1660010_1660136
             }
         }
 
-        public void themThuoc(int a, string b, string c, int d, float e, bool f)
+        public void themThuoc(int a, string b, int c, int d, int e, int f)
         {
-            this._iDThuoc = a;
-            this._tenThuoc = b;
-            this._donVi = c;
-            this._soLuongTon = d;
-            this._gia = e;
-            this._xoa = f;
+            this.IDThuoc = a;
+            this.TenThuoc = b;
+            this.IDDonVi = c;
+            this.SoLuongTon = d;
+            this.Gia = e;
+            this.Xoa = f;
         }
     }
 }

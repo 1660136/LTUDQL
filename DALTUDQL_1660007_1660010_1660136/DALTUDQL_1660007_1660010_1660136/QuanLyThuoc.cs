@@ -10,13 +10,40 @@ namespace DALTUDQL_1660007_1660010_1660136
 {
     class QuanLyThuoc
     {
-        public DataTable LoadListAvailable()    //hàm load các thuốc không có tick Xóa
+        /*public List<string> loadListToSelect()
         {
             Provider p = new Provider();
-            string strQuery = "";   //chuỗi chứa strore proceduce để load
+            string strQuery = "loadListMedicineToSelect";   //chuỗi chứa strore proceduce để load
+            List<string> lMedicine = new List<string>();
             DataTable dt = new DataTable();
             try
             {
+                p.Connect();
+                dt = p.Select(CommandType.StoredProcedure, strQuery);
+                foreach(DataTable row in dt.Rows)
+                {
+                    lMedicine.Add(row["TenThuoc"].ToString());
+                }
+                return lMedicine;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                p.Disconnect();
+            }
+        }*/
+
+        public DataTable LoadListAvailable()    //hàm load các thuốc không có tick Xóa
+        {
+            Provider p = new Provider();
+            string strQuery = "LayDSThuoc";   //chuỗi chứa strore proceduce để load
+            DataTable dt = new DataTable();
+            try
+            {
+                p.Connect();
                 dt = p.Select(CommandType.StoredProcedure, strQuery);
                 return dt;
             }
@@ -40,7 +67,7 @@ namespace DALTUDQL_1660007_1660010_1660136
                 p.ExecuteNonQuery(CommandType.StoredProcedure, strQuery,
                     new SqlParameter { ParameterName = "@", Value = t.IDThuoc },
                     new SqlParameter { ParameterName = "@", Value = t.TenThuoc },
-                    new SqlParameter { ParameterName = "@", Value = t.DonVi },
+                    new SqlParameter { ParameterName = "@", Value = t.IDDonVi },
                     new SqlParameter { ParameterName = "@", Value = t.SoLuongTon },
                     new SqlParameter { ParameterName = "@", Value = t.Gia },
                     new SqlParameter { ParameterName = "@", Value = t.Xoa });
@@ -65,7 +92,7 @@ namespace DALTUDQL_1660007_1660010_1660136
                 p.ExecuteNonQuery(CommandType.StoredProcedure, strQuery,
                     new SqlParameter { ParameterName = "@", Value = t.IDThuoc },
                     new SqlParameter { ParameterName = "@", Value = t.TenThuoc },
-                    new SqlParameter { ParameterName = "@", Value = t.DonVi },
+                    new SqlParameter { ParameterName = "@", Value = t.IDDonVi },
                     new SqlParameter { ParameterName = "@", Value = t.SoLuongTon },
                     new SqlParameter { ParameterName = "@", Value = t.Gia },
                     new SqlParameter { ParameterName = "@", Value = t.Xoa });
@@ -80,15 +107,15 @@ namespace DALTUDQL_1660007_1660010_1660136
             }
         }
 
-        public void deleteMedicine(int m)
+        public void deleteMedicine(string m)
         {
             Provider p = new Provider();
-            string strQuery = "";
+            string strQuery = "XoaThuoc";
             try
             {
                 p.Connect();
                 p.ExecuteNonQuery(CommandType.StoredProcedure, strQuery,
-                    new SqlParameter { ParameterName = "@", Value = m });
+                    new SqlParameter { ParameterName = "@Ten", Value = m });
             }
             catch(SqlException ex)
             {

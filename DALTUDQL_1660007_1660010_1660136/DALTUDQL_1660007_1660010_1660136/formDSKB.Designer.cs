@@ -296,28 +296,38 @@
             // 
             // STT
             // 
+            this.STT.DataPropertyName = "IDBN";
             this.STT.HeaderText = "STT";
             this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
             // 
             // HoTen
             // 
+            this.HoTen.DataPropertyName = "TenBN";
             this.HoTen.HeaderText = "Họ Tên";
             this.HoTen.Name = "HoTen";
+            this.HoTen.ReadOnly = true;
             // 
             // GioiTinh
             // 
+            this.GioiTinh.DataPropertyName = "GioiTinh";
             this.GioiTinh.HeaderText = "Giới Tính";
             this.GioiTinh.Name = "GioiTinh";
+            this.GioiTinh.ReadOnly = true;
             // 
             // NamSinh
             // 
+            this.NamSinh.DataPropertyName = "NgaySinh";
             this.NamSinh.HeaderText = "Năm Sinh";
             this.NamSinh.Name = "NamSinh";
+            this.NamSinh.ReadOnly = true;
             // 
             // DiaChi
             // 
+            this.DiaChi.DataPropertyName = "DiaChi";
             this.DiaChi.HeaderText = "Địa Chỉ";
             this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
             // 
             // formDSKB
             // 

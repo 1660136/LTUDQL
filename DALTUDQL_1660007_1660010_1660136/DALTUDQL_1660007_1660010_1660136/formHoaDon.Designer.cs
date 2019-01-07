@@ -101,6 +101,7 @@
             this.textBoxHoaDon_TienKham.Name = "textBoxHoaDon_TienKham";
             this.textBoxHoaDon_TienKham.Size = new System.Drawing.Size(166, 20);
             this.textBoxHoaDon_TienKham.TabIndex = 1;
+            this.textBoxHoaDon_TienKham.Text = "30000";
             // 
             // label3
             // 

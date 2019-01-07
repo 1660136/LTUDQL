@@ -15,6 +15,12 @@ namespace DALTUDQL_1660007_1660010_1660136
         public formDSKB()
         {
             InitializeComponent();
+            DataTable dt = new DataTable();
+            Provider p = new Provider();
+            string strQuery = "loadDSBNinDay";
+            p.Connect();
+            dt = p.Select(CommandType.StoredProcedure, strQuery);
+            dataGridViewDSKB.DataSource = dt;
         }
 
         private void btnDSKB_Thoat_Click(object sender, EventArgs e)

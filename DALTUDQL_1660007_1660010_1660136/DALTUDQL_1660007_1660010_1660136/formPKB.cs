@@ -15,6 +15,9 @@ namespace DALTUDQL_1660007_1660010_1660136
         public formPKB()
         {
             InitializeComponent();
+            QuanLyThuoc qlT = new QuanLyThuoc();
+
+            //comboBox1.DataSource = qlT.loadListToSelect();
         }
 
         private void btnPKB_Thoat_Click(object sender, EventArgs e)

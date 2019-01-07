@@ -53,6 +53,11 @@
             this.tabsFrmMain = new System.Windows.Forms.TabControl();
             this.tabQLBN = new System.Windows.Forms.TabPage();
             this.btnQLBN_DSKB = new System.Windows.Forms.Button();
+            this.IDThuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenThuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDDonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabBC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataDSThuoc)).BeginInit();
             this.groupBoxDSThuoc.SuspendLayout();
@@ -96,11 +101,21 @@
             // 
             // dataDSThuoc
             // 
+            this.dataDSThuoc.AllowUserToAddRows = false;
+            this.dataDSThuoc.AllowUserToDeleteRows = false;
             this.dataDSThuoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataDSThuoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IDThuoc,
+            this.TenThuoc,
+            this.IDDonVi,
+            this.SoLuongTon,
+            this.Gia});
             this.dataDSThuoc.Location = new System.Drawing.Point(5, 20);
             this.dataDSThuoc.Name = "dataDSThuoc";
+            this.dataDSThuoc.ReadOnly = true;
             this.dataDSThuoc.Size = new System.Drawing.Size(829, 247);
             this.dataDSThuoc.TabIndex = 0;
+            this.dataDSThuoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataDSThuoc_CellClick);
             // 
             // groupBoxDSThuoc
             // 
@@ -120,6 +135,7 @@
             this.btnQLT_Xoa.TabIndex = 33;
             this.btnQLT_Xoa.Text = "XÓA";
             this.btnQLT_Xoa.UseVisualStyleBackColor = true;
+            this.btnQLT_Xoa.Click += new System.EventHandler(this.btnQLT_Xoa_Click);
             // 
             // groupBoxTTThuoc
             // 
@@ -212,6 +228,7 @@
             this.btnQLT_Sua.TabIndex = 35;
             this.btnQLT_Sua.Text = "SỬA";
             this.btnQLT_Sua.UseVisualStyleBackColor = true;
+            this.btnQLT_Sua.Click += new System.EventHandler(this.btnQLT_Sua_Click);
             // 
             // btnQLT_Huy
             // 
@@ -246,6 +263,7 @@
             this.btnQLT_Them.TabIndex = 32;
             this.btnQLT_Them.Text = "THÊM";
             this.btnQLT_Them.UseVisualStyleBackColor = true;
+            this.btnQLT_Them.Click += new System.EventHandler(this.btnQLT_Them_Click);
             // 
             // btnQLBN_DSBN
             // 
@@ -302,6 +320,36 @@
             this.btnQLBN_DSKB.UseVisualStyleBackColor = true;
             this.btnQLBN_DSKB.Click += new System.EventHandler(this.btnQLBN_DSKB_Click);
             // 
+            // IDThuoc
+            // 
+            this.IDThuoc.DataPropertyName = "IDThuoc";
+            this.IDThuoc.HeaderText = "ID Thuốc";
+            this.IDThuoc.Name = "IDThuoc";
+            // 
+            // TenThuoc
+            // 
+            this.TenThuoc.DataPropertyName = "TenThuoc";
+            this.TenThuoc.HeaderText = "Tên Thuốc";
+            this.TenThuoc.Name = "TenThuoc";
+            // 
+            // IDDonVi
+            // 
+            this.IDDonVi.DataPropertyName = "IDDV";
+            this.IDDonVi.HeaderText = "ID Đơn Vị";
+            this.IDDonVi.Name = "IDDonVi";
+            // 
+            // SoLuongTon
+            // 
+            this.SoLuongTon.DataPropertyName = "SoLuongTon";
+            this.SoLuongTon.HeaderText = "Số Lượng Tồn";
+            this.SoLuongTon.Name = "SoLuongTon";
+            // 
+            // Gia
+            // 
+            this.Gia.DataPropertyName = "Gia";
+            this.Gia.HeaderText = "Giá";
+            this.Gia.Name = "Gia";
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,6 +397,11 @@
         private System.Windows.Forms.Button btnQLBN_DSKB;
         private System.Windows.Forms.TextBox textBoxQLT_SoLuongTon;
         private System.Windows.Forms.Label lbSoLuongTon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDThuoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenThuoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDDonVi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongTon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gia;
     }
 }
 
